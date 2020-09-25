@@ -17,6 +17,36 @@ function findMin (numbers) {
     
 }
 
-const min = findMin(numbers);
+
+function getMin2(numbers) {
+    if(!numbers.length) {
+        throw new Error('Should nob te an empty array!');
+    }
+
+    let sortedNumbers;
+
+    for (let i = 0; i < numbers.lenght; i++) {
+        let outerElement = numbers[i];
+        for ( let j = i + 1; j < numbers.length; j++) {
+            let innerElement = numbers[j];
+            if (outerElement > innerElement) {
+
+                numbers[i] = innerElement;
+                numbers[j] = outerElement; // [1, 3, 2]
+
+                outerElement = numbers[i];
+                innerElement = numbers[j];
+
+                console.log(numbers[i],numbers[j]);
+            }
+        }
+    }
+
+    return numbers[0];
+
+}
+
+
+const min = getMin2(numbers);
 console.log(min);
 
