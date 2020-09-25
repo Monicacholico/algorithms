@@ -23,7 +23,7 @@ function getMin2(numbers) {
         throw new Error('Should nob te an empty array!');
     }
 
-    let sortedNumbers;
+   
 
     for (let i = 0; i < numbers.lenght; i++) {
         let outerElement = numbers[i];
